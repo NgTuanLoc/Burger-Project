@@ -41,6 +41,7 @@ class BurgerBuilder extends Component {
         })
       })
   }
+  
 
   purchaseHandler = () => {
     this.setState({
@@ -66,34 +67,35 @@ class BurgerBuilder extends Component {
   };
 
   purchaseContinueHandler = () => {
-    this.setState({
-      loading: true,
-    });
-    const order = {
-      ingredients: this.state.ingredients,
-      price: this.state.totalPrice,
-      customer: {
-        name: "NgTuanLoc",
-        age: 21,
-        address: "82 PHC p12 q5",
-      },
-    };
-    axios
-      .post("/orders.json", order)
-      .then((response) => {
-        this.setState({
-          loading: false,
-          purchasing: false,
-        });
-        console.log(response);
-      })
-      .catch((error) => {
-        this.setState({
-          loading: false,
-          purchasing: false,
-        });
-        console.log(error);
-      });
+    // this.setState({
+    //   loading: true,
+    // });
+    // const order = {
+    //   ingredients: this.state.ingredients,
+    //   price: this.state.totalPrice,
+    //   customer: {
+    //     name: "NgTuanLoc",
+    //     age: 21,
+    //     address: "82 PHC p12 q5",
+    //   },
+    // };
+    // axios
+    //   .post("/orders.json", order)
+    //   .then((response) => {
+    //     this.setState({
+    //       loading: false,
+    //       purchasing: false,
+    //     });
+    //     console.log(response);
+    //   })
+    //   .catch((error) => {
+    //     this.setState({
+    //       loading: false,
+    //       purchasing: false,
+    //     });
+    //     console.log(error);
+    //   });
+    this.props.history.push('/checkout')
   };
 
   addIngredientHandler = (type) => {
