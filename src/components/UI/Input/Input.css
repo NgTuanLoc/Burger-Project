@@ -1,7 +1,7 @@
 .Input {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .Label {
@@ -11,17 +11,22 @@
 }
 
 .InputElement {
-    width: 100%;
-    box-sizing: border-box;
-    display: block;
     outline: none;
     border: 1px solid #ccc;
     background-color: white;
     font: inherit;
-    padding: 6px 10px;    
+    padding: 6px 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.Input:focus{
+.InputElement:focus {
     outline: none;
-    background-color: white;
+    background-color: #ccc;
+}
+
+.Invalid {
+    border: 1px solid red;
+    background-color: #FDA49A;
 }
